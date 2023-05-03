@@ -9,7 +9,10 @@ describe("Search Item", () => {
 		search.typeSearchButton("Carrot")
 		search.clickAddToCart()
 		search.clickCart()
-		search.clickRemove()
-		cy.contains('You cart is empty!').should('be.visible');
+		search.clickProceedToCheckout()
+		search.clickPlaceOrder()
+		search.selectCountry('Armenia')
+		search.clickAgree()
+		search.clickProceed()
 	})
 })
